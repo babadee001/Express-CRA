@@ -4,24 +4,24 @@ import axios from "../../node_modules/axios";
 
 export default {
   getIndieArtistEvents: function () {
-    return axios.get("/api/events/ticketMaster ");
+    return axios.get("api/events/ticketMaster ");
   },
 
 
   getIndieArtists: function () {
-    return axios.get("/api/artists/ticketMaster ");
+    return axios.get("api/artists/ticketMaster ");
   },
 
   // Gets a single user by id
   getUser: (id) => {
-    return axios.get(`/api/user/${id}`);
+    return axios.get(`api/user/${id}`);
   },
   // sign up a user to our service
   signUpUser: (username, email, password) => {
     return axios.post('api/signup', { username: username, email: email, password: password });
   },
   searchArtist: (name) => {
-    return axios.get(`/api/events/artist/${name}`);
+    return axios.get(`api/events/artist/${name}`);
   },
   getProfileEvents: (email) =>{
     return axios.get(`api/events/all/${email}`); 
